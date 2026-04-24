@@ -653,7 +653,7 @@
   }
   .cred-item:hover { padding-left: 8px; }
   .cred-icon {
-    width: 36px; height: 36px;
+    width: 44px; height: 44px;
     border: 1px solid var(--border);
     display: flex; align-items: center; justify-content: center;
     font-family: var(--serif);
@@ -661,6 +661,15 @@
     color: var(--gold);
     flex-shrink: 0;
     margin-top: 2px;
+    overflow: hidden;
+    background: #fff;
+    padding: 4px;
+    box-sizing: border-box;
+  }
+  .cred-icon img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
   }
   .cred-name {
     font-size: 14px;

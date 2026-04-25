@@ -75,12 +75,14 @@
     border-bottom: 1px solid var(--border-dim);
   }
   .nav-logo {
-    font-family: var(--serif);
-    font-size: 18px;
-    font-weight: 400;
-    color: var(--text);
-    letter-spacing: 0.02em;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+  .nav-logo-img {
+    height: 36px;
+    width: 36px;
+    display: block;
   }
   .nav-links {
     display: flex; gap: 36px; list-style: none;
@@ -733,6 +735,17 @@
     padding: 28px 60px;
     border-top: 1px solid var(--border-dim);
     display: flex; justify-content: space-between; align-items: center;
+  }
+  .footer-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .footer-logo {
+    height: 28px;
+    width: 28px;
+    display: block;
+    opacity: 0.8;
   }
   .footer-copy {
     font-size: 12px;

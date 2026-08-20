@@ -45,3 +45,22 @@
     });
   }, { threshold: 0.12 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function closeMobileMenu() {
+    navToggle.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+    document.body.classList.remove('nav-open');
+  }
+  navToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    navToggle.classList.toggle('active', isOpen);
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+    document.body.classList.toggle('nav-open', isOpen);
+  });
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+  });
